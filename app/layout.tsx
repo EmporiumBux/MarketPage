@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import './globals.css'
-import { Analytics } from "@vercel/analytics/react"
+import { Analytics } from '@vercel/analytics/react'
 
 export const metadata: Metadata = {
   title: 'EmporiumBux',
@@ -11,15 +11,17 @@ export const metadata: Metadata = {
   },
 }
 
-
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en">
-      <body>{children}</body>
+    <html lang="pt-BR">
+      <body>
+        {children}
+        <Analytics /> {/* Aqui é onde o rastreamento acontece */}
+      </body>
     </html>
   )
 }
